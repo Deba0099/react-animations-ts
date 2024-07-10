@@ -1,0 +1,38 @@
+{
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "dist",
+        "node_modules"
+    ],
+    "compilerOptions": {
+        "module": "esnext",
+        "lib": [
+            "dom",
+            "esnext"
+        ],
+        "allowUnreachableCode": false,
+        "allowUnusedLabels":false,
+        "importHelpers": true,
+        "rootDir": "./src",
+        "outDir": "./dist/esm",
+        "jsx": "react-jsx",
+        "sourceMap": true,
+        "declaration": true,
+        "removeComments": true,
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "noUncheckedIndexedAccess": true,
+        "noImplicitOverride": true,
+        "noPropertyAccessFromIndexSignature": true,
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "allowSyntheticDefaultImports": true,
+    }
+}
