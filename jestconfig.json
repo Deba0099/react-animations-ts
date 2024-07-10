@@ -14,6 +14,6 @@
     "testEnvironment": "jsdom",
     "globals": {
         "ts-jest": {
-          "tsconfig": "./tsconfig.json"
+          "tsconfig": "tsconfig.json"
         }}
 }
