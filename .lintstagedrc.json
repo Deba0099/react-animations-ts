@@ -1,0 +1,4 @@
+{
+    "*.{ts,tsx}": ["eslint --cache --max-warnings=0 --fix", "prettier --write"]
+  }
+  
