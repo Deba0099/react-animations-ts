@@ -20,8 +20,16 @@
     "typescript",
     "animations"
   ],
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
   "author": "Debabrata Dash",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@types/react": "^18.3.3",
     "react": "^18.3.1",
