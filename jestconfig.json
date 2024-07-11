@@ -1,23 +1,19 @@
 {
-    "transform": {
-        "^.+\\.(t|j)sx?$": "ts-jest"
-    },
-    "testRegex": "(/tests/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": [
-        "ts",
-        "tsx",
-        "js",
-        "jsx",
-        "json",
-        "node"
-    ],
+    "preset": "ts-jest",
     "testEnvironment": "jsdom",
-    "globals": {
-        "ts-jest": {
-            "tsconfig": "tsconfig.json"
-        }
-    },
+    "testPathIgnorePatterns": ["<rootDir>/dist/"],
     "transformIgnorePatterns": [
-        "<rootDir>/dist/"
-    ]
-}
+      "<rootDir>/dist/*",
+      "<rootDir>/node_modules/*",
+      "/node_modules/(?!(lz-string|@testing-library/dom|@testing-library/react|jest-canvas-mock|cssfontparser)/)"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "testRegex": "(/tests/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$"
+  }
