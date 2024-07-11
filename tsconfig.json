@@ -1,6 +1,7 @@
 {
     "include": [
-        "src/**/*"
+        "src/**/*",
+        "tests/**/*"
     ],
     "exclude": [
         "dist",
@@ -13,9 +14,9 @@
             "esnext"
         ],
         "allowUnreachableCode": false,
-        "allowUnusedLabels":false,
+        "allowUnusedLabels": false,
         "importHelpers": true,
-        "allowJs":true,
+        "allowJs": true,
         "rootDir": "src",
         "outDir": "dist/esm",
         "jsx": "react-jsx",
@@ -34,6 +35,6 @@
         "esModuleInterop": true,
         "skipLibCheck": true,
         "forceConsistentCasingInFileNames": true,
-        "allowSyntheticDefaultImports": true,
+        "allowSyntheticDefaultImports": true
     }
 }
