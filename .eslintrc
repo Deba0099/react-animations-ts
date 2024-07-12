@@ -40,8 +40,13 @@
   "overrides": [
     {
       "files": [
-        "tests/**/*"
+        "tests/**/*",
+        "*.ts",
+        "*.tsx"
       ],
+      "rules":{
+        "react/prop-types": "off"
+      },
       "env": {
         "jest": true
       }
