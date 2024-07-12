@@ -6,10 +6,7 @@
 [![License][github-license]][github-license-url]
 
 
-You can clone it and step by step create your own NPM package and publish it.
-
-It is simple React counter.
-
+Now its under development. Please don’t download this. 
 <!-- [**Live Demo**](https://Deba0099.github.io/react-animations-ts/) -->
 
 ## Installation:
