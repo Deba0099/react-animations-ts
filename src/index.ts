@@ -1,3 +1,5 @@
-import { App } from './components'
+import { ScaleAnimatedBox, SlideAnimatedBox } from './animations'
+export { App } from './components'
+export { SlideAnimatedBox, ScaleAnimatedBox }
 
-export { App }
+export { ServerStyleSheet, StyleSheetManager } from 'styled-components'
