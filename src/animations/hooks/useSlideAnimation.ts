@@ -8,8 +8,8 @@ import { SlideAnimationStylesProps } from './types.hooks'
 
 export const useSlideAnimation = ({
   duration,
-  startPositionY,
-  endPositionY,
+  startPosition,
+  endPosition,
   triggerOnClick,
   isClickable,
   overrideParentOverflow,
@@ -22,11 +22,11 @@ export const useSlideAnimation = ({
 
     const startAnimation = () => {
       element.style.animationDuration = `${duration}ms`
-      element.style.setProperty('--startPositionY', `${startPositionY}px`)
-      element.style.setProperty('--endPositionY', `${endPositionY}px`)
-      element.classList.add('slide-top')
+      element.style.setProperty('--startPosition', `${startPosition}px`)
+      element.style.setProperty('--endPosition', `${endPosition}px`)
+      element.classList.add('_rat-slide')
     }
-    // Below commented code will work to override the config with in the custom hook
+    // !Below commented code will work to override the config with in the custom hook
     // overrideParentOverflow &&
     //   useParentOverflowControl(
     //     elementRef.current,
@@ -35,41 +35,43 @@ export const useSlideAnimation = ({
     //     { overflowType: 'overflowY', overflowValue: 'auto' },
     //   )
 
-    // Below commented code will work to override the config
+    // !Below commented code will work to override the config
 
-    // const parentClasses = overrideParentOverflow
-    //   ?.map((parentClass) => `[class*="${parentClass}"]`)
-    //   .join('')
-    // const parentElement = parentClasses
-    //   ? (element.closest(parentClasses) as HTMLElement | null)
-    //   : undefined
+    /**
+     * const parentClasses = overrideParentOverflow
+      ?.map((parentClass) => `[class*="${parentClass}"]`)
+      .join('')
+    const parentElement = parentClasses
+      ? (element.closest(parentClasses) as HTMLElement | null)
+      : undefined
 
-    // if (!parentElement) return
+    if (!parentElement) return
 
-    // const toggleOverflowX = (toggleOn: boolean) => {
-    //   if (toggleOn) {
-    //     parentElement.style.overflowY = 'visible'
-    //   } else {
-    //     parentElement.style.overflowY = 'auto'
-    //   }
-    // }
+    const toggleOverflowX = (toggleOn: boolean) => {
+      if (toggleOn) {
+        parentElement.style.overflowY = 'visible'
+      } else {
+        parentElement.style.overflowY = 'auto'
+      }
+    }
 
-    // const animationStartHandler = () => {
-    //   toggleOverflowX(true)
-    // }
+    const animationStartHandler = () => {
+      toggleOverflowX(true)
+    }
 
-    // const animationEndHandler = () => {
-    //   toggleOverflowX(false)
-    // }
+    const animationEndHandler = () => {
+      toggleOverflowX(false)
+    }
 
-    // element.addEventListener('animationstart', animationStartHandler)
-    // element.addEventListener('animationend', animationEndHandler)
+    element.addEventListener('animationstart', animationStartHandler)
+    element.addEventListener('animationend', animationEndHandler)
 
     if (triggerOnClick) {
       element.addEventListener('click', startAnimation)
     } else if (!isClickable) {
       startAnimation()
     }
+     */
 
     return () => {
       // element.removeEventListener('animationstart', animationStartHandler)
@@ -77,10 +79,10 @@ export const useSlideAnimation = ({
       if (triggerOnClick) {
         element.removeEventListener('click', startAnimation)
       }
-      element.classList.remove('slide-top')
+      element.classList.remove('_rat-slide')
       // toggleOverflowX(false)
     }
-  }, [duration, startPositionY, endPositionY, triggerOnClick, isClickable, overrideParentOverflow])
+  }, [duration, startPosition, endPosition, triggerOnClick, isClickable, overrideParentOverflow])
 
   return elementRef
 }

@@ -21,31 +21,52 @@ or
 npm install -D react-animations-ts
 ```
 
-<!-- ## Usage :
+## Animation Types
 
-Add `MyCounter` to your component:
+`1. SlideAnimatedBox` 
+
+Props are : `duration`, `startPosition`, `endPosition` 
+You can play around with `0`, `positive` and `negative` numbers.
+
+## Usage :
 
 ```js
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { MyCounter } from 'react-animations-ts'
+import { SlideAnimatedBox } from 'react-animations-ts'
+
+
+const squareBoxStyle: React.CSSProperties = {
+  width: '100px',
+  height: '100px',
+  background: 'white',
+  color:'#0C161C',
+  borderRadius: '8px',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+};
+const flexBoxStyle: React.CSSProperties = {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  height: '80vh',
+  background:'#0C161C'
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
+
 root.render(
     <React.StrictMode>
-        <div>
-            <h2>Default counter</h2>
-            <MyCounter />
-        </div>
-        <hr />
-        <div>
-            <h2>Counter with predefined value</h2>
-            <MyCounter value={5} />
+        <div syle={flexBoxStyle}>
+            <SlideAnimatedBox duration={1000} startPosition={-100} endPosition={100}>
+                <div syle={squareBoxStyle}>OMM</div>
+            </SlideAnimatedBox>
         </div>
     </React.StrictMode>,
 )
 
-``` -->
+```
 
 [npm-url]: https://www.npmjs.com/package/react-animations-ts
 [npm-image]: https://img.shields.io/npm/v/react-animations-ts

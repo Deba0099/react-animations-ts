@@ -1,6 +1,6 @@
 {
   "name": "react-animations-ts",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Effortlessly animate React components with TypeScript precision using our lightweight, dependency-free animation library.",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",

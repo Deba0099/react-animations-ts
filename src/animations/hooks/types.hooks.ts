@@ -1,6 +1,6 @@
 export type SlideAnimationStylesProps = {
-  endPositionY: number
-  startPositionY?: number
+  endPosition: number
+  startPosition?: number
   duration: number
   triggerOnClick?: boolean
   isClickable?: boolean | undefined

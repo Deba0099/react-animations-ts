@@ -5,22 +5,23 @@ import { SlideAnimatedBoxProps } from './types.components'
 export const SlideAnimatedBox: React.FC<SlideAnimatedBoxProps> = ({
   children,
   duration = 500,
-  startPositionY = 0,
-  endPositionY = -100,
+  startPosition = 0,
+  endPosition = 100,
   triggerOnClick = false,
   isClickable = undefined,
+  animationType
 }) => {
   const { useSlideAnimation } = useAnimations()
   const elementRef = useSlideAnimation({
     duration,
-    startPositionY,
-    endPositionY,
+    startPosition,
+    endPosition,
     triggerOnClick,
     isClickable,
   })
 
   return (
-    <SlideAnimatedStyle ref={elementRef} duration={duration}>
+    <SlideAnimatedStyle animationType={animationType} ref={elementRef} duration={duration}>
       {children}
     </SlideAnimatedStyle>
   )

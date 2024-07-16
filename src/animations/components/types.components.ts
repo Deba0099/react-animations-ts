@@ -1,12 +1,14 @@
 import { ReactNode } from 'react'
+import { AnimationType } from '../styles/types.styles'
 
 export interface SlideAnimatedBoxProps {
   children: ReactNode
   duration?: number
-  startPositionY?: number
-  endPositionY?: number
+  startPosition?: number
+  endPosition?: number
   triggerOnClick?: boolean
   isClickable?: boolean | undefined
+  animationType?: AnimationType
 }
 
 export interface ScaleAnimatedBoxProps {
