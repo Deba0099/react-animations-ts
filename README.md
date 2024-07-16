@@ -58,9 +58,9 @@ const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 
 root.render(
     <React.StrictMode>
-        <div syle={flexBoxStyle}>
+        <div style={flexBoxStyle}>
             <SlideAnimatedBox duration={1000} startPosition={-100} endPosition={100}>
-                <div syle={squareBoxStyle}>OMM</div>
+                <div style={squareBoxStyle}>OMM</div>
             </SlideAnimatedBox>
         </div>
     </React.StrictMode>,
