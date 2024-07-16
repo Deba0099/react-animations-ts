@@ -1,5 +1,4 @@
 import styled, { keyframes, css } from 'styled-components'
-import { slideAnimations } from './constants.styles'
 import { SlideAnimatedStyleProps } from './types.styles'
 
 export const slideTopBottom = keyframes`
@@ -25,7 +24,7 @@ export const slideTR = keyframes`
     transform: translateY(var(--startPosition)) translateX(var(--startPosition));
   }
   100% {
-    transform: translateY(calc(-1 * var(--endPositionY))) translateX(var(--endPosition));
+    transform: translateY(calc(-1 * var(--endPosition))) translateX(var(--endPosition));
   }
 `;
 
@@ -34,9 +33,16 @@ export const slideBL = keyframes`
     transform: translateY(var(--startPosition)) translateX(var(--startPosition));
   }
   100% {
-    transform: translateY(var(--endPosition)) translateX(calc(-1 * var(--endPositionY)));
+    transform: translateY(var(--endPosition)) translateX(calc(-1 * var(--endPosition)));
   }
 `;
+
+export const slideAnimations = {
+  SLIDE_TOP_BOTTOM: slideTopBottom,
+  SLIDE_LEFT_RIGHT: slideLeftRight,
+  SLIDE_TOP_RIGHT: slideTR,
+  SLIDE_BOTTOM_LEFT: slideBL,
+}
 
 export const SlideAnimatedStyle = styled.div<SlideAnimatedStyleProps>`
   ${({ animationType = 'SLIDE_TOP_BOTTOM', duration }) => css`
@@ -48,21 +54,4 @@ export const SlideAnimatedStyle = styled.div<SlideAnimatedStyleProps>`
 `
 
 
-// ! Below code will be deleted if the above works  fine
 
-// import styled, { keyframes } from 'styled-components'
-
-// const slideTop = keyframes`
-//   0% {
-//     transform: translateY(var(--startPosition));
-//   }
-//   100% {
-//     transform: translateY(var(--endPosition));
-//   }
-// `
-
-// export const SlideAnimatedStyle = styled.div<{ duration: number }>`
-//   &.slide-top {
-//     animation: ${slideTop} ${({ duration }) => duration}ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-//   }
-// `

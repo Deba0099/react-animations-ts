@@ -65,13 +65,14 @@ export const useSlideAnimation = ({
 
     element.addEventListener('animationstart', animationStartHandler)
     element.addEventListener('animationend', animationEndHandler)
-
-    if (triggerOnClick) {
-      element.addEventListener('click', startAnimation)
-    } else if (!isClickable) {
-      startAnimation()
-    }
      */
+
+    // if (triggerOnClick) {
+    //   element.addEventListener('click', startAnimation)
+    // } else if (!isClickable) {
+    //   startAnimation()
+    // }
+    startAnimation()
 
     return () => {
       // element.removeEventListener('animationstart', animationStartHandler)

@@ -1,4 +1,4 @@
-import { slideAnimations } from './constants.styles'
+import { slideAnimations } from "./slideAnimation.style"
 
 export type AnimationType = keyof typeof slideAnimations
 

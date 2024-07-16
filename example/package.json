@@ -3,7 +3,7 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "start": "parcel src/index.html"
+        "start": "react-scripts start"
     },
     "devDependencies": {
         "@types/react": "^18.3.3",
