@@ -7,7 +7,7 @@ const App = () => (
   <div>
     <h1>Development App</h1>
     <FlexBox>
-      <SlideAnimatedBox duration={1000} startPosition={0} endPosition={-150}>
+      <SlideAnimatedBox animationType='SLIDE_TR_BL' duration={1500} startPosition={-100} endPosition={0}>
         <SquareBox />
       </SlideAnimatedBox>
     </FlexBox>

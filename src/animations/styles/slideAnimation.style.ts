@@ -19,7 +19,7 @@ export const slideLeftRight = keyframes`
   }
 `
 
-export const slideTR = keyframes`
+export const slideTRBL = keyframes`
   0% {
     transform: translateY(var(--startPosition)) translateX(var(--startPosition));
   }
@@ -40,14 +40,14 @@ export const slideBL = keyframes`
 export const slideAnimations = {
   SLIDE_TOP_BOTTOM: slideTopBottom,
   SLIDE_LEFT_RIGHT: slideLeftRight,
-  SLIDE_TOP_RIGHT: slideTR,
+  SLIDE_TR_BL: slideTRBL,
   SLIDE_BOTTOM_LEFT: slideBL,
 }
 
 export const SlideAnimatedStyle = styled.div<SlideAnimatedStyleProps>`
-  ${({ animationType = 'SLIDE_TOP_BOTTOM', duration }) => css`
+  ${({ animationType = 'SLIDE_TOP_BOTTOM' }) => css`
     &._rat-slide {
-      animation: ${slideAnimations[animationType]} ${duration}ms
+      animation: ${slideAnimations[animationType]} var(--duration)
         cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     }
   `}
