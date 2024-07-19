@@ -13,7 +13,8 @@
     "format": "prettier --write \"{src,tests,example/src}/**/*.{js,ts,jsx,tsx}\"",
     "test": "jest --config jestconfig.json",
     "prepare": "npm run build",
-    "prepublishOnly": "npm test && npm run format && npm run lint"
+    "prepublishOnly": "npm test && npm run format && npm run lint",
+    "dev": "vite --config vite.config.ts playground"
   },
   "keywords": [
     "react",
@@ -32,9 +33,12 @@
   "license": "MIT",
   "dependencies": {
     "@types/react": "^18.3.3",
-    "react": "^18.3.1",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "react": ">=16",
     "react-dom": "^18.3.1",
-    "styled-components": "^6.1.11"
+    "styled-components": "^6.1.11",
+    "vite": "^5.3.4"
   },
   "devDependencies": {
     "@testing-library/react": "^16.0.0",
