@@ -28,21 +28,36 @@ npm install -D react-animations-ts
 Props are : `duration`, `startPosition`, `endPosition`, `animationType` 
 You can play around with `0` (Note : 0 is the actual position of the element), `positive` and `negative` numbers.
 
-`animationType` Behaviour :
+### `animationType` Behaviour : 
+### Slide Animation: Top to Bottom (SLIDE_TOP_BOTTOM)
 
-`SLIDE_TOP_BOTTOM`
+1. When the `startPosition` is 0:
+   - If the `endPosition` is a positive number, the element will move from its actual position to the bottom.
+   - If the `endPosition` is a negative number, the element will move from its actual position to the top.
+2. When the `endPosition` is 0:
+   - If the `startPosition` is a negative number, the element will move from the top to its actual position.
+   - If the `startPosition` is a positive number, the element will move from the bottom to its actual position.
 
-`SLIDE_LEFT_RIGHT`
 
-`SLIDE_TR_BL`
+### Slide Animation: Left to Right (SLIDE_LEFT_RIGHT)
 
---> When the `startPosition` is 0 and the `endPosition` is a positive number, the element will move from its actual position to the top-right corner.
+1. When the `startPosition` is 0:
+   - If the `endPosition` is a positive number, the element will move from its actual position to the right.
+   - If the `endPosition` is a negative number, the element will move from its actual position to the left.
+2. When the `endPosition` is 0:
+   - If the `startPosition` is a negative number, the element will move from the left to its actual position.
+   - If the `startPosition` is a positive number, the element will move from the right to its actual position.
 
---> When the `startPosition` is 0 and the `endPosition` is a negative number, the element will move from its actual position to the bottom-left corner.
 
---> When the `endPosition` is 0 and the `startPosition` is a negative number, the element will move from the top-left corner to its actual position.
+### Slide Animation: Top-Right to Bottom-Left (SLIDE_TR_BL)
 
---> When the `endPosition` is 0 and the `startPosition` is a positive number, the element will move from the bottom-right corner to its actual position.
+1. When the `startPosition` is 0:
+   - If the `endPosition` is a positive number, the element will move from its actual position to the top-right corner.
+   - If the `endPosition` is a negative number, the element will move from its actual position to the bottom-left corner.
+2. When the `endPosition` is 0:
+   - If the `startPosition` is a negative number, the element will move from the top-left corner to its actual position.
+   - If the `startPosition` is a positive number, the element will move from the bottom-right corner to its actual position.
+
 
 
 
