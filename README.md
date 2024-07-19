@@ -30,11 +30,11 @@ You can play around with `0` (Note : 0 is the actual position of the element), `
 
 `animationType` Behaviour :
 
-SLIDE_TOP_BOTTOM 
+`SLIDE_TOP_BOTTOM`
 
-SLIDE_LEFT_RIGHT
+`SLIDE_LEFT_RIGHT`
 
-SLIDE_TR_BL
+`SLIDE_TR_BL`
 
 --> When the `startPosition` is 0 and the `endPosition` is a positive number, the element will move from its actual position to the top-right corner.
 
