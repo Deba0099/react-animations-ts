@@ -21,7 +21,7 @@ export const SlideAnimatedBox: React.FC<SlideAnimatedBoxProps> = ({
   })
 
   return (
-    <SlideAnimatedStyle animationType={animationType} ref={elementRef} duration={duration}>
+    <SlideAnimatedStyle animationType={animationType} ref={elementRef} >
       {children}
     </SlideAnimatedStyle>
   )
