@@ -29,11 +29,11 @@ Props are : `duration`, `startPosition`, `endPosition`, `animationType`
 You can play around with `0` (Note : 0 is the actual position of the element), `positive` and `negative` numbers.
 
 `animationType` Behaviour : 
-1. SLIDE_TOP_BOTTOM 
+SLIDE_TOP_BOTTOM 
 
-2. SLIDE_LEFT_RIGHT
+SLIDE_LEFT_RIGHT
 
-3. SLIDE_TR_BL
+SLIDE_TR_BL
 
 --> When the `startPosition` is 0 and the `endPosition` is a positive number, the element will move from its actual position to the top-right corner.
 
