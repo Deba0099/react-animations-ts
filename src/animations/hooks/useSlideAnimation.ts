@@ -21,7 +21,7 @@ export const useSlideAnimation = ({
       element.style.setProperty('--endPosition', `${endPosition}px`)
       element.classList.add('_rat-slide')
     }
-  
+
     if (triggerOnClick && isClickable) {
       element.addEventListener('click', startAnimation)
     } else if (!isClickable) {

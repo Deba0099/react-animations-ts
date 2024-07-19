@@ -26,7 +26,7 @@ export const slideTRBL = keyframes`
   100% {
     transform: translateY(calc(-1 * var(--endPosition))) translateX(var(--endPosition));
   }
-`;
+`
 
 export const slideBL = keyframes`
   0% {
@@ -35,7 +35,7 @@ export const slideBL = keyframes`
   100% {
     transform: translateY(var(--endPosition)) translateX(calc(-1 * var(--endPosition)));
   }
-`;
+`
 
 export const slideAnimations = {
   SLIDE_TOP_BOTTOM: slideTopBottom,
@@ -52,6 +52,3 @@ export const SlideAnimatedStyle = styled.div<SlideAnimatedStyleProps>`
     }
   `}
 `
-
-
-

@@ -9,7 +9,7 @@ export const SlideAnimatedBox: React.FC<SlideAnimatedBoxProps> = ({
   endPosition = 100,
   triggerOnClick = false,
   isClickable = undefined,
-  animationType
+  animationType,
 }) => {
   const { useSlideAnimation } = useAnimations()
   const elementRef = useSlideAnimation({

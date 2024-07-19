@@ -51,3 +51,4 @@ terraform.rc
 # <<< domelint-end
 CHANGELOG.md
 tools/generator
+playground
