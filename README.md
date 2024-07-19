@@ -25,8 +25,21 @@ npm install -D react-animations-ts
 
 `1. SlideAnimatedBox` 
 
-Props are : `duration`, `startPosition`, `endPosition` 
-You can play around with `0`, `positive` and `negative` numbers.
+Props are : `duration`, `startPosition`, `endPosition`, `animationType` 
+You can play around with `0` (Note : 0 is the actual position of the element), `positive` and `negative` numbers.
+
+`animationType` Behaviour : 
+1. SLIDE_TOP_BOTTOM 
+
+2. SLIDE_LEFT_RIGHT
+
+3. SLIDE_TR_BL
+  --> When the `startPosition` is 0 and the `endPosition` is a positive number, the element will move from its actual position to the top-right corner.
+  --> When the `startPosition` is 0 and the `endPosition` is a negative number, the element will move from its actual position to the bottom-left corner.
+  --> When the `endPosition` is 0 and the `startPosition` is a negative number, the element will move from the top-left corner to its actual position.
+  --> When the `endPosition` is 0 and the `startPosition` is a positive number, the element will move from the bottom-right corner to its actual position.
+
+
 
 ## Usage :
 
