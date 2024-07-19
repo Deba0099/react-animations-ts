@@ -28,7 +28,8 @@ npm install -D react-animations-ts
 Props are : `duration`, `startPosition`, `endPosition`, `animationType` 
 You can play around with `0` (Note : 0 is the actual position of the element), `positive` and `negative` numbers.
 
-`animationType` Behaviour : 
+`animationType` Behaviour :
+
 SLIDE_TOP_BOTTOM 
 
 SLIDE_LEFT_RIGHT
