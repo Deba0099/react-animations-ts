@@ -21,7 +21,7 @@ or
 npm install -D react-animations-ts
 ```
 
-## Animation Types
+## Animation Components 
 
 `1. SlideAnimatedBox` 
 
